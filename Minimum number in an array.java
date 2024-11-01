@@ -1,21 +1,18 @@
-import java.util.Scanner;
-class CompareNumbers{
+class Main{
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("enter the first number: ");
-        double num1 = sc.nextDouble();
-        System.out.println("enter the second number: ");
-        double num2 = sc.nextDouble();
-        sc.close();
-        
-        int num1FloatingNum=(int)(num1 * 1000);
-        int num2FloatingNum=(int)(num2 * 1000);
-        if(num1FloatingNum == num2FloatingNum){
-               System.out.println("The floating numbers are equal ");
+        int arr[] = {22,55,3,34,6,1,66,8};
+        int min = findMin(arr);
+        System.out.println("The minimum number in the array is :"+min);
+    }
+    public static int findMin(int[] arr){
+        int min = arr[0];
+        for(int i=0; i<arr.length; i++){
+            if (arr[i]<min){
+                min = arr [i];
+            }
         }
-        else{
-              System.out.println("The floating numbers are not equal ");
-
+        return min;
     }
 }
-}
+        
+   
